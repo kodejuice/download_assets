@@ -94,7 +94,8 @@ class DownloadAssetsControllerImpl implements DownloadAssetsController {
           fullPath: fullPath,
           extenstion: extension(assetUrl.fileName ?? assetUrl.url),
         ));
-        final size = await customHttpClient.checkSize(assetUrl.url);
+        final size = 123000000; // TODO: remove
+        // final size = await customHttpClient.checkSize(assetUrl.url);
         totalSize += size;
       }
 
