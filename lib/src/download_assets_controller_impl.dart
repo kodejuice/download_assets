@@ -103,6 +103,7 @@ class DownloadAssetsControllerImpl implements DownloadAssetsController {
 
       final downloadedBytesPerAsset = <String, int>{};
 
+      onProgress?.call(0.5);
       for (final asset in assets) {
         await customHttpClient.download(
           asset.assetUrl,
